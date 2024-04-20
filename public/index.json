@@ -1,0 +1,28 @@
+
+{
+    
+    
+    
+    
+    
+    
+    
+    
+        
+        
+        
+    
+        
+        
+        
+    
+        
+        
+        
+    
+    "articles": [{"date":"2024-04-20","image":"","imageAlt":"","link":"http://localhost:1313/posts/id-software-prinicpals-of-good-development/","summary":"Recently I watched a conference talk by the legend: John Romero, of ID software. During this presentation, he introduced a set of core principals the team used during the development of Wolfenstein 3D through to the Quake era to keep their games shippable and bug free at all times. There is alot of wisdom here from one of the all time greats that was in the trenches of the 90\u0026rsquo;s game development scene.","tags":["id","john romero","post","software"],"title":"ID Software Prinicpals of Good Development"},{"date":"0001-01-01","image":"","imageAlt":"","link":"http://localhost:1313/manifest/index.json","summary":"","tags":[],"title":"Manifest"},{"date":"0001-01-01","image":"","imageAlt":"","link":"http://localhost:1313/search/","summary":"","tags":[],"title":"Search"}],
+    "test": "ID Software Prinicpals of Good Development   Manifest   Search   ",
+    "page": "1",
+    "next": ""
+}
+

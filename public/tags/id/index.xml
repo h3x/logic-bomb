@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/feed_style.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="https://www.rssboard.org/media-rss">
+  <channel>
+    <title>Id on Logic Bomb</title>
+    <link>http://localhost:1313/tags/id/</link>
+    <description>Recent content in Id on Logic Bomb</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Licensed under WTFPL</copyright>
+    <lastBuildDate>Sat, 20 Apr 2024 06:05:13 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/id/index.xml" rel="self" type="application/rss+xml" /><icon>http://localhost:1313/logo.png</icon>
+    
+    
+    <item>
+      <title>ID Software Prinicpals of Good Development</title>
+      <link>http://localhost:1313/posts/id-software-prinicpals-of-good-development/</link>
+      <pubDate>Sat, 20 Apr 2024 06:05:13 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/id-software-prinicpals-of-good-development/</guid>
+      <description><![CDATA[<p>Recently I watched a conference talk by the legend: John Romero, of ID software. During this presentation, he introduced a set of core principals the team used during the development of Wolfenstein 3D through to the Quake era to keep their games shippable and bug free at all times. There is alot of wisdom here from one of the all time greats that was in the trenches of the 90&rsquo;s game development scene. Back when jut a couple of people and a computer could produce a mega hit that took the world by storm. Although those days are long past (to my deepest sorrow), these principals stand as wisdom from our ancesors to be meditated upon and considered deeply in how they can apply to every programmers daily coding life.</p>
+<h3 id="principal-1">Principal 1:</h3>
+<pre tabindex="0"><code>No prototypes. Just make the game. Polish as you go. Don&#39;t depend on polish happening later. Always maintain constantly shippable code.
+</code></pre><p>This, as Romero says, is how they made so many games at such a quick pace. The game was all in their minds eye and just needed to be built.</p>
+<h3 id="principal-2">Principal 2:</h3>
+<pre tabindex="0"><code>Its incredibly important that your game can always be run by your team. Bulletprood your engine by providing defaults upon load failure.
+</code></pre><p>This principal was key when they moved their offices accross the country and couldn&rsquo;t waste any development time during this period. This princpal ensures that there is never a situation where there are people waiting around for a fix when something fails. The game could always be loaded even when assets were missing or there was bad, corrupted or inconsistant data.</p>
+<h3 id="principal-3">Principal 3:</h3>
+<pre tabindex="0"><code>Keep your code absolutly simple. Keep looking at your functions and figure out how you can simplify further.
+</code></pre><p>This one is fairly easy to understand. Keeping a simple and readable codebase allows others as well as yourself to understand at a glance what a function is doing without having to dive through the codebase and waste time analysing how it works.</p>
+<h3 id="principal-4">Principal 4:</h3>
+<pre tabindex="0"><code>Great tools help make great games. Spend as much time on tools as possible.
+</code></pre><p>The perfect example of this principal in practice is Romeros tile editor: Ted. This tile editor was in service through the development of 33 shipped retail games. It is quite easy to see how the existance of this particular tool sped up the development of future projects. The tooling surrounding a project can be just as important as the project itself.</p>
+<h3 id="principal-5">Principal 5:</h3>
+<pre tabindex="0"><code>We are our own best testing team and should never allow anoyone else to experience bugs or see the game crash. Don&#39;t waste other&#39;s time. Test thoroughly before checking in your code.
+</code></pre><p>This one may seem obvious but is often overlooked. In modern times where there are QA departments, it is very easy to spit out your code, do a couple of happy path tests and call it done and let the QA person find anything you have overlooked. In professional software development where there a time pressures and promises made to clients of new features, we should try to remember that a buggy feature is often much worse that shipping a week late.</p>
+<h3 id="principal-6">Principal 6:</h3>
+<pre tabindex="0"><code>As soon as you see a bug, you fix it. Do not continue on. If you don&#39;t fix your bugs, your new code will be built on a buggy codebase and ensure an unstable foundation.
+</code></pre><p>This is a follow on from Principal 5. Best efforts should be made to fix any bugs you&rsquo;ve introduced, or log a bug ticket for something you have found in another team&rsquo;s code.</p>
+<h3 id="principlal-7">Principlal 7:</h3>
+<pre tabindex="0"><code>Use a development system that is superior to your target.
+</code></pre><p>Back when ID sofware were targeting MSDOS, they used the NeXTSTEP computers to develop DOOM. The NeXTSTEP computers were the most expensive, highest power machines you could buy. This allowed the team to uphold Principal 4. They found they could create far better tooling with the beefier computers. In the age where most apps are aimed for the web, this one may seem a little outdated. I suppose it could still be relevant for standalone applications or games. But in an era where good hardware is cheap, this one is not hard to follow.</p>
+<h3 id="principal-8">Principal 8:</h3>
+<pre tabindex="0"><code>Write your code for this game only - not for a future game. You&#39;re going to be writing new code later because you&#39;ll be smarter.
+</code></pre><p>This makes sense for a game. A game is a one off product and once shipped, its shipped. It doesnt really apply to Saas products as these generally stick around and are modified over and over. In the codebase im working in currently, I&rsquo;ve seen commits from over 10 years ago that are still in service today. Adapting this principal a little and we come to one of my main philosophies of software development: Dont over generalise your classes and methods. Dont try to be the master key to everyones problems. Write code for the job that needs to be done and not for some future that may not happen. This, to me, means that we shouldnt try to make out functions work for undefined behaviour, we should just do the job we are trying to do. In the future, these methods can be adapted for some future need, but more likely than not, the future need can have its own funtion or class that suits the purpose of that future goal in a cleaner and more precise manner than trying to adapt old code to bend to a new idea. We dont want to tie ourselvs down to the limitations of our old code.</p>
+<h3 id="principal-9">Principal 9:</h3>
+<pre tabindex="0"><code>Encapsulate functionality to ensure design consistancy. This minimises mistakes and saves design time.
+</code></pre><p>This one came about while ID software were working on Quake. An example of this principal in action were the torches on the walls. They could have made the designers place the torch model on the wall, then the fire model on top, then the torch sound effect. If they needed to move a torch to a new location, all three of these elements would need to be moved independly. It was far easier to create a torch entity that contained all the torch functionality and place the entity where needed.</p>
+<h3 id="principal-10">Principal 10:</h3>
+<pre tabindex="0"><code>Try to code transparently. Tell your lead and peers exactly how you are going to solve your current task and get feedback and advice. Do not treat game programming like each coder is a black box. The project could go off the rails and cause delays.
+</code></pre><p>During ID&rsquo;s first 5.5 years, they shipped 28 games with less than 10 developers, as well as licencing their game engines to countless other games. This transparency enabled the team to know exactly what to expect from each other&rsquo;s code and to solve problems together.</p>
+<h3 id="principal-11">Principal 11:</h3>
+<pre tabindex="0"><code>Programming is a creative art form based in logic. Every programmer is different and will code differently. It&#39;s the output that matters.
+</code></pre><p>Ive long held this belief. Similar to the philosphy that restricts enable creativity, the rules and conventions of a programming framework provide guard rails and guides on how to solve problems in a creative and meaningful way. The creativity of programming comes from how the problem is solved, not just the solution.</p>
+]]></description>
+      
+    </item>
+    
+    
+  </channel>
+</rss>
